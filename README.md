@@ -4,17 +4,16 @@
 
 <h1>Data Observability</h1>
 
-<p><strong>The Enterprise Standard for Continuous Data Reliability, Quality Intelligence, and Pipeline Observability</strong></p>
+<p><strong>The Institutional-Grade Platform for Standardized Data Trust Foundations, Quality Governance, and Multi-Cloud Observability Ecosystems.</strong></p>
 
-[![Observability: Full--Stack](https://img.shields.io/badge/Observability-Full--Stack-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Reliability: Five--Nines](https://img.shields.io/badge/Reliability-Five--Nines-green.svg?style=for-the-badge&labelColor=000000)]()
-[![Governance: Schema--Safe](https://img.shields.io/badge/Governance-Schema--Safe-ff69b4?style=for-the-badge&labelColor=000000)]()
+[![Standard: Data-Excellence](https://img.shields.io/badge/Standard-Data--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Secure--Data--Orchestration](https://img.shields.io/badge/Focus-Secure--Data--Orchestration-indigo.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
-> **"You cannot trust the data you cannot observe."** 
-> Data Observability is a flagship platform designed to provide production-ready monitoring for the modern data stack across Azure, AWS, GCP, and hybrid estates.
+> **"Industrializing data telemetry to automate trust foundations."** 
+> **Data Observability** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global data trust operations. It orchestrates the complex lifecycle of data observability—from pipeline telemetry integration and quality metrics calculation to lineage analysis and unified trust auditing.
 
 </div>
 
@@ -22,654 +21,263 @@
 
 ## 🏛️ Executive Summary
 
-**Data Observability** is a flagship enterprise platform designed for Chief Data Officers (CDOs), Data Engineers, and SREs. In the era of data-driven decision making, "silent data failure"—where pipelines appear healthy but data is stale, missing, or corrupted—is the primary threat to business intelligence and AI accuracy.
+Fragmented data pipelines and manual quality checks are strategic operational liabilities; lack of centralized data observability is a primary barrier to organizational engineering maturity. Organizations fail to maintain a high-performing data culture not because of a lack of data, but because of fragmented measurement standards, lack of automated anomaly identification, and an inability to orchestrate observability planes with operational precision.
 
-This platform delivers a complete **Data Reliability Framework**, providing automated **Anomaly Detection**, **Freshness SLAs**, **Schema Drift Protection**, and **Lineage-Aware Impact Analysis**. It integrates natively with **Databricks**, **Snowflake**, **BigQuery**, and **Airflow**, ensuring that data engineers are the first to know when a reliability breach occurs, not the executive stakeholders.
-
----
-
-## 💡 Why Data Observability Matters
-
-As data estates scale, human-led quality checks become impossible.
-- **Silent Failures**: Jobs finish successfully but deliver null values or duplicate records.
-- **Schema Drift**: Upstream changes break downstream dashboards without warning.
-- **Freshness Breaches**: Decisions are made based on 24-hour-old data instead of real-time insights.
-- **Cost Inefficiency**: Orphaned datasets and inefficient queries bloat cloud budgets.
+This platform provides the **Data Intelligence Plane**. It implements a complete **Data-Observability-as-Code Framework**, enabling Data Leaders and Platform teams to manage global data trust foundations as first-class citizens. By automating the identification of delivery bottlenecks through real-time telemetry analysis and orchestrating the provisioning of secure performance-driven validation policies, we ensure that every organizational team—from core data engineers to product analytics squads—is supported by default, audited for history, and strictly aligned with institutional trust frameworks (OpenLineage, Great Expectations).
 
 ---
 
-## 🚀 Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Reliability Impact
-- **90% Faster MTTR**: Automated alerting and lineage mapping pinpoint the root cause in seconds.
-- **Guaranteed Data Trust**: Executive-level reliability scorecards provide transparency for all datasets.
-- **Optimized Cloud Spend**: Automated detection of cost anomalies and underutilized data assets.
-- **Governance at Scale**: Automated schema and quality policy enforcement across multi-cloud environments.
-
----
-
-## 🏗️ Technical Stack
-
-| Layer | Technology | Rationale |
-|---|---|---|
-| **Monitoring Engine** | Python / FastAPI | High-performance API for telemetry collection and rules. |
-| **Anomaly Detection** | scikit-learn / NumPy | Statistical models for volume and quality drift. |
-| **Frontend** | React 18, Vite | Premium portal for reliability scorecards and incidents. |
-| **Database** | PostgreSQL | Centralized repository for reliability state and metadata. |
-| **Infrastructure** | Terraform | Multi-cloud IaC for observability foundations. |
-| **Orchestration** | GitHub Actions | Automated CI/CD for reliability rules and platform updates. |
-
----
-
-## 📐 Architecture Storytelling: 60+ Diagrams
-
-### 1. Executive High-Level Architecture
-The end-to-end reliability flow from ingestion to executive dashboard.
-
-```mermaid
-graph TD
-    Sources[Databricks / Snowflake / BigQuery] --> Collect[Telemetry Collectors]
-    Collect --> Engine[Observability Engine: Anomaly/SLA]
-    Engine --> Portal[Observability Portal]
-    Portal --> Exec[Executive Scorecards]
-    Engine --> Alert[Alerting: PagerDuty / Slack]
-```
-
-### 2. Detailed Component Topology
-The internal service boundaries and telemetry ingestion paths.
+### 1. Principal Architecture: Global Data Observability & Data Intelligence Plane
+This diagram illustrates the end-to-end flow from pipeline telemetry ingestion and multi-cloud orchestration to quality enforcement, performance validation, and institutional data auditing.
 
 ```mermaid
 graph LR
-    subgraph "Control Plane"
-        API[Observability API]
-        Metadata[(Reliability Metadata)]
-        Anomaly[Anomaly Engine]
+    %% Subgraph Definitions
+    subgraph TelemetryIngress["Pipeline & Pipeline Ingress"]
+        direction TB
+        Sources["Databases / Streams / Files"]
+        Ingest["Kafka / Event Hub / CDC"]
+        ETL["Spark / Airflow / DBT"]
     end
-    subgraph "Edge Collectors"
-        D_Col[Databricks Collector]
-        S_Col[Snowflake Collector]
+
+    subgraph IntelligenceEngine["Data Intelligence Hub"]
+        direction TB
+        API["FastAPI Analytics Gateway"]
+        AnalyticsOrchestrator["Global Trust & Quality Hub"]
+        Governance_Hub["Privacy & Compliance Guardrail Hub"]
+        AIOps_Validator["Drift & Anomaly Analysis Hub"]
     end
-    D_Col --> API
-    S_Col --> API
-    API --> Metadata
-    Anomaly --> Metadata
-```
 
-### 3. Frontend to Backend Request Path
-Tracing a "View Incident Timeline" request through the platform.
+    subgraph OperationsPlane["Distributed Analytics Ecosystem"]
+        direction TB
+        ManagedLakes["Managed Standardized Metrics Lakes"]
+        ActivePipelines["Managed Automated Flow Pipelines"]
+        ReportingSinks["Managed Infrastructure Delivery Hubs"]
+    end
 
-```mermaid
-sequenceDiagram
-    participant SRE as Data SRE
-    participant W as React UI
-    participant A as FastAPI
-    participant Q as Redis Queue
-    participant E as Anomaly Engine
+    subgraph OperationsHub["Institutional Data Hub"]
+        direction TB
+        Scorecard["Data Maturity Scorecard"]
+        Analytics["Data Flow & Trust Velocity Stats"]
+        Audit["Forensic Trust Metadata Lake"]
+    end
+
+    subgraph DevOps["Data-Observability-as-Code Framework"]
+        direction TB
+        TF["Terraform Analytics Modules"]
+        DriftBot["Productivity & Config Drift Validator"]
+        ChatOps["Measurement Operations Hub"]
+    end
+
+    %% Flow Arrows
+    TelemetryIngress -->|1. Submit Telemetry| API
+    API -->|2. Orchestrate Analytics| AnalyticsOrchestrator
+    AnalyticsOrchestrator -->|3. Apply Privacy Guard| Governance_Hub
+    Governance_Hub -->|4. Assess Drift| AIOps_Validator
     
-    SRE->>W: Select "SLA Breach: Sales_Orders"
-    W->>A: GET /incidents/sales-123
-    A->>E: Fetch Anomaly Trace
-    E-->>A: Status: Distribution Drift Detected
-    A-->>W: Render Root Cause Analysis
+    AIOps_Validator -->|5. Execute Calculation| OperationsPlane
+    OperationsPlane -->|6. Notify Status| ChatOps
+    API -->|7. Visualize Health| Scorecard
+    
+    Scorecard -->|8. Track Maturity| Analytics
+    Scorecard -->|9. Record Performance| Audit
+    
+    TF -->|10. Provision Backbone| IntelligenceEngine
+    DriftBot -->|11. Inject Friction Risk| AnalyticsOrchestrator
+    Audit -->|12. Improve Operations| ManagedLakes
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef operations fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class TelemetryIngress ingress;
+    class IntelligenceEngine intel;
+    class OperationsPlane operations;
+    class OperationsHub ops;
+    class DevOps devops;
 ```
 
-### 4. Metadata + Telemetry Control Plane
-Managing the lifecycle of data reliability signals.
-
-```mermaid
-graph TD
-    Signal[Telemetry Signal] --> Valid[Validation Filter]
-    Valid --> Store[(Time-Series Store)]
-    Store --> Rule[SLA Evaluation]
-    Rule --> Breach[Incident Generation]
-```
-
-### 5. Multi-Cloud Data Platform Topology
-Monitoring diverse data estates from a single pane of glass.
-
-```mermaid
-graph LR
-    User[CDO Office] --> Portal[Global Hub]
-    Portal --> Azure[Azure: Databricks / Fabric]
-    Portal --> AWS[AWS: Snowflake / Redshift]
-    Portal --> GCP[GCP: BigQuery]
-```
-
-### 6. Regional Deployment Model
-Hosting observability workers close to the data for performance.
-
-```mermaid
-graph TD
-    GTM[Global Traffic Manager] --> EastUS[East US: Collector Hub]
-    GTM --> WestEurope[West Europe: Collector Hub]
-    EastUS --> LocalDB[(Regional Metadata Cache)]
-```
-
-### 7. DR Failover Model
-Ensuring reliability monitoring is itself highly reliable.
+### 2. The Data Observability Lifecycle Flow
+The continuous path of a data observability platform from initial integration (pipeline) and aggregation (metrics) to active analysis (anomaly), optimization (trust), and institutional forensic auditing (scorecard).
 
 ```mermaid
 graph LR
-    Primary[Active Hub] -->|Replication| Secondary[Standby Hub]
-    Secondary -->|Health Probe| Primary
-    Primary --> Failover{System Down?}
-    Failover -->|Yes| Secondary
+    Integrate["Integrate (Pipeline)"] --> Aggregate["Aggregate (Metrics)"]
+    Aggregate --> Analyze["Analyze (Anomaly)"]
+    Analyze --> Optimize["Optimize (Trust)"]
+    Optimize --> Report["Report & Scorecard"]
 ```
 
-### 8. API Gateway Architecture
-Securing and throttling telemetry ingestion.
-
-```mermaid
-graph TD
-    Req[Telemetry Stream] --> Auth[OIDC / Entra ID]
-    Auth --> WAF[Web App Firewall]
-    WAF --> Router[Path Router]
-```
-
-### 9. Queue Worker Architecture
-Managing background anomaly detection and score calculation.
+### 3. Distributed Data Telemetry Topology
+Strategically orchestrating standardized analytics across global data hubs, diverse lakehouses, and multi-cloud platforms, providing a unified institutional view of global data health and operational readiness.
 
 ```mermaid
 graph LR
-    Job[Check Freshness: Hub] --> Redis[Redis Job Queue]
-    Redis --> W1[Worker Alpha: Freshness Scorer]
-    Redis --> W2[Worker Beta: Quality Analyzer]
-    W1 --> Result[Update Scorecard]
+    RegionA["Edge: US West (Primary) Ingestion"] -->|Sync| Hub["Unified Data Hub"]
+    BU["Hub: EU Central (Secondary) Lake"] -->|Sync| Hub
+    Cloud["Site: Multi-Cloud (Azure/AWS) SaaS"] -->|Sync| Hub
+    Hub --- Logic["Global Metrics Engine"]
 ```
 
-### 10. Dashboard Analytics Flow
-How raw telemetry becomes executive reliability scorecards.
+### 4. Data Governance & High-Trust Data Plane Protection Flow
+Executing complex logic for securing the bridge between data pipelines and executive dashboards, ensuring every organizational identity is verified, team-level privacy is maintained, and every telemetry access is according to institutional standards.
 
 ```mermaid
 graph TD
-    Raw[JSON Telemetry] --> Parser[Findings Parser]
-    Parser --> Scorer[Reliability Scorer]
-    Scorer --> Dashboard[Executive UI]
+    MetricsData["Usage: Quality & Trust Data"] --> Bridge["Rule: Guardrail Hub"]
+    Bridge --> PolicyMap["Rule: Privacy & Policy Map"]
+    PolicyMap -->|Evaluate| Context["PATH: Global Data View"]
+    Context --- Estimate["Measurement Integrity Score"]
 ```
 
-### 11. Pipeline Monitoring Lifecycle
-Continuous health tracking of data movement.
+### 5. Multi-Region Data Federation & Governance Flow
+Automatically managing unified data observability standards across global regions and diverse business units, ensuring institutional data residency and privacy boundaries by default.
 
 ```mermaid
 graph LR
-    Job[Pipeline Job] --> Health[Heartbeat Check]
-    Health --> Success[Log Success]
-    Health --> Failure[Trigger Alert]
+    Org["Global Measurement System"] -->|Apply| Guard["Governance Isolation Hub"]
+    Guard -->|Violate| Alert["Telemetry Latency Alert"]
+    Guard -->|Pass| Verify["Status: Governed Analytics"]
+    Verify --- Audit["Isolation Compliance Log"]
 ```
 
-### 12. Freshness SLA Evaluation Flow
-Validating data arrival against business expectations.
-
-```mermaid
-graph TD
-    Data[New Record] --> TS[Arrival Timestamp]
-    TS --> Calc[Calculate Latency]
-    Calc --> SLA{Within 1h?}
-    SLA -->|No| Breach[Flag SLA Breach]
-```
-
-### 13. Data Quality Scoring Model
-Quantifying the trust level of a dataset.
+### 6. Encryption & Perimeter Protection Flow (Data Standard)
+Managing the lifecycle of an analytics request, automatically enforcing institutional TLS 1.3 and resource encryption standards as required by security policy, ensuring zero-latency security confidence.
 
 ```mermaid
 graph LR
-    Tests[DQ Tests: Null/Type/Regex] --> Agg[Score Aggregator]
-    Agg --> Score[Quality: 98.2]
+    AnalyticsReq["Dashboard Access Query"] -->|Check| Gatekeeper["Measurement Protection Bot"]
+    Gatekeeper -->|Verify| TLS["TLS 1.3 & Resource Encryption Check"]
+    TLS -->|Pass| Admit["Status: Secure Analytics Traffic"]
+    Admit --- Audit["Security Compliance Log"]
 ```
 
-### 14. Null Spike Anomaly Detection
-Identifying sudden loss of data integrity.
+### 7. Institutional Data Observability Maturity Scorecard
+Grading organizational performance based on key indicators: Data Quality Index, Pipeline Reliability Index, and Trust Adoption Scores.
 
 ```mermaid
 graph TD
-    History[Historical Null %] --> Baseline[Statistical Mean]
-    Current[Current Null %] --> Compare[Check Variance]
-    Compare -->|High| Anomaly[Null Spike Alert]
+    Post["Trust Health: 99%"] --> Risk["Delivery Gap: 1%"]
+    Post --- C1["Quality Index (100%)"]
+    Post --- C2["Trust Adoption (98%)"]
 ```
 
-### 15. Row Count Variance Workflow
-Detecting missing or duplicated data waves.
+### 8. Identity & RBAC for Data Governance
+Managing fine-grained access to analytics hubs, provisioning workers, and audit logs between CDOs, Data Engineering Managers, and Data Stewards.
+
+```mermaid
+graph TD
+    CDO["CDO"] --> Hub["Manage Organization rules"]
+    Manager["Data Manager"] --> Exec["Execute team analytics"]
+    Steward["Data Steward"] --> Audit["Verify Metric Proofs"]
+```
+
+### 9. IaC Deployment: Data-Observability-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the analytics tracking hubs, policy protection workers, and forensic metadata lakes.
 
 ```mermaid
 graph LR
-    Batch[New Batch] --> Count[Row Count]
-    Count --> Range[Expected Range: 100k-120k]
-    Range -->|Out| Alert[Volume Anomaly]
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Measurement Control Plane"]
+    Engine --> Clusters["HA Validation Fleet"]
 ```
 
-### 16. Distribution Drift Model
-Monitoring changes in the statistical profile of data.
-
-```mermaid
-graph TD
-    Train[Train on Last 30d] --> Model[Drift Model]
-    New[New Dataset] --> Model
-    Model -->|Shift| Alert[Distribution Drift]
-```
-
-### 17. Schema Change Detection Flow
-Protecting downstream consumers from breaking changes.
+### 10. AIOps Data Drift & Risk Validation Flow
+Using advanced analytics to identify sudden surges in data volume, unauthorized schema changes, suspicious configuration drifts, or unusual delivery pattern changes that could result in institutional risk or data corruption.
 
 ```mermaid
 graph LR
-    Capture[Fetch Schema] --> Diff[Compare to vPrev]
-    Diff -->|Column Drop| Critical[Block / Alert]
-    Diff -->|Column Add| Minor[Log Change]
+    Drift["Delivery Change Event"] --> Analyzer["Drift Detection Bot"]
+    Analyzer -->|Anomaly| Alert["Trust Integrity Alert"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
 ```
 
-### 18. Lineage Impact Analysis
-Understanding the blast radius of a data incident.
-
-```mermaid
-graph TD
-    Failure[Broken Table: Finance] --> Down1[Dashboard: CFO Rev]
-    Failure --> Down2[ML Model: ARR Forecast]
-    Down1 --> Notify[Alert Stakeholders]
-```
-
-### 19. Incident Triage Workflow
-Standardizing the response to reliability breaches.
+### 11. Metadata Lake for Forensic Data Audit
+Storing long-term records of every pipeline integration event (metadata), every validation executed, and every lineage history for institutional record-keeping, compliance auditing, and post-provisioning forensics.
 
 ```mermaid
 graph LR
-    Breach[Alert] --> Triage[Assign Severity]
-    Triage --> RootCause[RCA via Lineage]
-    RootCause --> Resolve[Fix & Validate]
-```
-
-### 20. Auto-ticket creation model
-Automating the feedback loop to engineering.
-
-```mermaid
-graph TD
-    Incident[Critical Breach] --> Jira[Create Jira Ticket]
-    Jira --> Assign[Auto-Assign to Domain Lead]
-```
-
-### 21. Databricks Telemetry Flow
-Capturing job and table metrics from the lakehouse.
-
-```mermaid
-graph LR
-    DBX[Unity Catalog] --> Collect[REST API Collector]
-    Collect --> Metastore[Observability DB]
-```
-
-### 22. Snowflake Monitoring Model
-Tracking warehouse usage and query performance.
-
-```mermaid
-graph TD
-    SF[Information Schema] --> Poller[Metrics Poller]
-    Poller --> Cost[Cost Analyzer]
-```
-
-### 23. Fabric Observability Flow
-Monitoring Microsoft Fabric workspaces and items.
-
-```mermaid
-graph LR
-    Fab[Fabric Workspace] --> Event[Eventstream]
-    Event --> RealTime[Observability Hub]
-```
-
-### 24. BigQuery Monitoring Model
-Google Cloud data observability integration.
-
-```mermaid
-graph TD
-    BQ[Audit Logs] --> Sink[Pub/Sub]
-    Sink --> Processor[Telemetry Engine]
-```
-
-### 25. Redshift Metrics Workflow
-AWS data warehouse reliability tracking.
-
-```mermaid
-graph LR
-    RS[STL/SVL Views] --> Agent[AWS Collector]
-    Agent --> CloudWatch[Metrics]
-```
-
-### 26. Airflow DAG Monitoring Flow
-Observing orchestration health and task latencies.
-
-```mermaid
-graph TD
-    DAG[DAG Run] --> Callback[SLA Callback]
-    Callback --> API[Observability API]
-```
-
-### 27. dbt Run Observability Model
-Visualizing transformation quality from dbt Cloud/Core.
-
-```mermaid
-graph LR
-    dbt[dbt test/run] --> Artifact[manifest.json]
-    Artifact --> Parse[Reliability Parser]
-```
-
-### 28. Kafka Streaming Lag Model
-Monitoring real-time data arrival delays.
-
-```mermaid
-graph TD
-    Topic[Sales Topic] --> Lag[Consumer Lag: 50ms]
-    Lag --> Threshold{>500ms?}
-```
-
-### 29. Spark Job Performance Workflow
-Deep diving into distributed compute efficiency.
-
-```mermaid
-graph LR
-    Stage[Spark Stage] --> Skew[Data Skew Check]
-    Skew -->|Skewed| Advise[Repartition Advice]
-```
-
-### 30. Query Latency Benchmark Flow
-Tracking performance drift of critical BI queries.
-
-```mermaid
-graph TD
-    Query[Executive SQL] --> Bench[Baseline: 2s]
-    New[New Execution] -->|8s| Alert[Performance Degraded]
-```
-
-### 31. Cost Anomaly Detection Model
-Identifying runaway cloud data costs.
-
-```mermaid
-graph LR
-    Bill[Hourly Billing] --> Anomaly[Cost Spike: +400%]
-    Anomaly --> Owner[Notify Project Owner]
-```
-
-### 32. Chargeback Analytics Workflow
-Allocating data costs to business units.
-
-```mermaid
-graph TD
-    Cost[Shared Clusters] --> Tag[Domain Tagging]
-    Tag --> Invoice[Departmental Chargeback]
-```
-
-### 33. User Adoption Heatmap Flow
-Visualizing which datasets drive the most value.
-
-```mermaid
-graph LR
-    Usage[Query Logs] --> Heatmap[Top Datasets]
-    Heatmap --> CDO[Investment Planning]
-```
-
-### 34. Dashboard Usage Telemetry
-Monitoring the health of the "Last Mile" of data.
-
-```mermaid
-graph TD
-    PBI[PowerBI / Tableau] --> Activity[User Activity]
-    Activity --> Impact[Popularity Score]
-```
-
-### 35. Dataset Popularity Ranking
-Identifying "Gold" vs "Orphaned" data.
-
-```mermaid
-graph LR
-    Queries[Query Count] --> Rank[Top 10 Tables]
-```
-
-### 36. Executive KPI Review Cycle
-Measuring reliability ROI quarterly.
-
-```mermaid
-graph TD
-    Stats[Metrics] --> Meeting[Quarterly Review]
-```
-
-### 37. Reliability Scorecard Workflow
-Benchmarking dataset health for consumers.
-
-```mermaid
-graph LR
-    Data[Dataset A] --> Score[Reliability: 99.4]
-```
-
-### 38. Capacity Forecast Model
-Predicting future storage and compute needs.
-
-```mermaid
-graph TD
-    Trend[Growth Trend] --> Predict[Capacity Full in 3m]
-```
-
-### 39. SLA Breach Escalation Flow
-Ensuring visibility of unresolved data issues.
-
-```mermaid
-graph LR
-    Breach[SLA Breach] -->|2h| Lead[Team Lead]
-    Lead -->|24h| Director[Data Director]
-```
-
-### 40. Monthly Operating Review
-Aligning platform teams with reliability goals.
-
-```mermaid
-graph TD
-    Review[Monthly Review] --> Goals[Next Month OKRs]
-```
-
-### 41. OIDC / SSO Auth Flow
-Securing access to the observability portal.
-
-```mermaid
-sequenceDiagram
-    User->>Portal: Login
-    Portal->>AzureAD: Auth
-    AzureAD-->>User: Token
-```
-
-### 42. RBAC / ABAC Model
-Zero-trust access to reliability metadata.
-
-```mermaid
-graph TD
-    User[User] --> Role[Finance Analyst]
-    Role --> Data[Finance Reliability]
-```
-
-### 43. Secrets Management Flow
-Securing collector credentials.
-
-```mermaid
-graph LR
-    Coll[Collector] --> KV[Key Vault / Secrets Mgr]
-```
-
-### 44. Audit Logging Architecture
-Immutable records of all observability actions.
-
-```mermaid
-graph TD
-    Admin[Admin Action] --> Audit[(Immutable Log)]
-```
-
-### 45. Privacy Masking Workflow
-Protecting PII in telemetry data.
-
-```mermaid
-graph LR
-    Tele[Telemetry JSON] --> Mask[Mask PII]
-```
-
-### 46. Retention Lifecycle
-Managing the storage of historical metrics.
-
-```mermaid
-graph TD
-    Old[Metrics > 1yr] --> Archive[Cold Storage]
-```
-
-### 47. Access Request Workflow
-Governing requests to view sensitive incidents.
-
-```mermaid
-graph LR
-    Req[View HR Incident] --> Appr[HR Data Owner]
-```
-
-### 48. Change Governance Model
-Managing changes to reliability rules.
-
-```mermaid
-graph TD
-    Rule[Change SLA] --> PeerReview[Pull Request]
-```
-
-### 49. Policy-as-Code Lifecycle
-Continuous foundation compliance.
-
-```mermaid
-graph LR
-    Policy[SLA > 99%] --> Check[GHA Check]
-```
-
-### 50. Risk Review Workflow
-Assessing the impact of unmonitored data areas.
-
-```mermaid
-graph TD
-    Gap[Unmonitored Source] --> Risk[Flag to CISO]
-```
-
-### 51. Metrics Pipeline
-Real-time platform health monitoring.
-
-```mermaid
-graph LR
-    Engine[Engine] --> Prom[Prometheus]
-    Prom --> Grafana[Dashboard]
-```
-
-### 52. Logging Architecture
-Centralized logging for distributed collectors.
-
-```mermaid
-graph TD
-    ColA[Azure] --> Loki[Loki]
-    ColB[AWS] --> Loki
-```
-
-### 53. Tracing Model
-Tracing telemetry ingestion across services.
-
-```mermaid
-sequenceDiagram
-    Portal->>API: Fetch Score
-    API->>Engine: Calc Metrics
-```
-
-### 54. Alert Routing Workflow
-Directing alerts to the right team instantly.
-
-```mermaid
-graph LR
-    Anomaly[Sales Anomaly] --> Route[Sales Ops Team]
-```
-
-### 55. Pager Escalation Model
-Ensuring critical incidents are acknowledged.
-
-```mermaid
-graph TD
-    Alert[Critical] --> Pager[On-Call P1]
-```
-
-### 56. Release Pipeline Workflow
-Continuous delivery of the observability platform.
-
-```mermaid
-graph LR
-    Code[Code Push] --> GHA[Actions]
-    GHA --> AKS[Deploy]
-```
-
-### 57. Canary Deployment Flow
-Safely updating reliability rules.
-
-```mermaid
-graph TD
-    Update[New Rule] --> Canary[Test on 5% Data]
-```
-
-### 58. Chaos Testing Workflow
-Validating monitoring resilience.
-
-```mermaid
-graph LR
-    Chaos[Kill Collector] --> Detect[Alert Still Fires]
-```
-
-### 59. Recovery Validation Model
-Verifying data is clean after an incident fix.
-
-```mermaid
-graph TD
-    Fix[Fix Applied] --> ReCheck[Full Quality Scan]
-```
-
-### 60. Continuous Improvement Loop
-Refining models based on false positives.
-
-```mermaid
-graph LR
-    Alert[False Positive] --> Feedback[Model Retrain]
+    Provision["Sync Interaction Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["Data Metadata Lake"]
+    Lake --> Trends["Delivery Efficiency Trends"]
 ```
 
 ---
 
-## 🔬 Data Reliability Methodology
+## 🏛️ Core Governance Pillars
 
-### 1. The Six Dimensions of Data Quality
-Our platform evaluates every dataset against:
-- **Completeness**: Are there missing records or null spikes?
-- **Freshness**: Did the data arrive within the SLA?
-- **Accuracy**: Does the data match the physical reality?
-- **Consistency**: Is the data uniform across different systems?
-- **Validity**: Does the data conform to defined formats/schemas?
-- **Uniqueness**: Are there unexpected duplicate records?
-
-### 2. Anomaly Detection Engine
-We leverage statistical process control and machine learning to distinguish between "normal variance" (e.g., lower sales on weekends) and "genuine anomalies" (e.g., ingestion failure). Our engine automatically builds dynamic thresholds for every monitored metric, reducing alert fatigue.
+1.  **Unified Foundation Coordination**: Maximizing trust by centralizing all data measurement through a single institutional plane.
+2.  **Automated Analytics Provisioning**: Eliminating "manual quality checks" scenarios through proactive orchestration and pattern verification.
+3.  **Sequential Flow Intelligence**: Ensuring zero-interruption operations through dependency-aware telemetry-driven data engineering.
+4.  **Zero-Trust Privacy Protection**: Automatically enforcing identity-based access, team-level aggregation, and privacy evaluation across all analytics tiers.
+5.  **Autonomous Operations Logic**: Guaranteeing reliability through automated industry-specific effectiveness monitoring runbooks.
+6.  **Full Measurement Auditability**: Immutable recording of every metric change and analytics provision for institutional forensics.
 
 ---
 
-## 🚦 Getting Started
+## 🛠️ Technical Stack & Implementation
 
-### 1. Prerequisites
-- **Terraform** (v1.5+).
-- **Docker Desktop**.
-- **Azure/AWS/GCP CLI** configured.
+### Analytics Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Performance Engine**: Custom Python-based logic for multi-toolchain telemetry ingestion and trust metrics.
+*   **Integrations**: Native connectors for Spark, Airflow, dbt, and OpenTelemetry.
+*   **Persistence**: PostgreSQL (Data Ledger) and Redis (Live Flow State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege analytics management access.
 
-### 2. Local Setup
+### Governance Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Slate, Indigo (Modern high-fidelity productivity aesthetic).
+*   **Visualization**: D3.js for delivery topologies and Recharts for readiness velocity analytics.
+
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Measurement Hub**: Managed event sourcing for immutable trust timeline reconstruction.
+*   **IaC**: Modular Terraform for deploying the analytics landing zone and validation fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/measurement_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/collectors`** | Distributed telemetry workers | Azure, AWS, GCP APIs |
+| **`infrastructure/ingestion_pipes`** | Telemetry Ingestion Hubs | Webhooks, Lambda |
+| **`infrastructure/auditing`** | Forensic effectiveness sinks | S3, Athena, Quicksight |
+
+---
+
+## 🚀 Deployment Guide
+
+### Local Principal Environment
 ```bash
-# Clone the repository
-git clone https://github.com/Devopstrio/data-observability.git
+# Clone the Data Observability repository
+git clone https://github.com/devopstrio/data-observability.git
 cd data-observability
 
-# Start the Observability Control Plane
-docker-compose up --build
+# Configure environment
+cp .env.example .env
+
+# Launch the Analytics stack
+make init
+
+# Trigger a mock telemetry update and automated guardrail validation simulation
+make simulate-observability
 ```
-Access the Reliability Portal at `http://localhost:3000`.
+
+Access the Management Portal at `http://localhost:3000`.
 
 ---
 
-## 🛡️ Governance & Security
-- **Privacy by Design**: All telemetry data is stripped of PII before storage.
-- **Immutable Auditability**: Every change to a reliability rule or an incident status is recorded in an immutable audit log.
-- **Zero-Trust Access**: Access to the observability control plane is governed by enterprise OIDC and granular RBAC.
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
-<sub>&copy; 2026 Devopstrio &mdash; Engineering the Future of Data Trust.</sub>
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
